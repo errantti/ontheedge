@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9488940F-C066-49B6-8A01-7B536CA911DB}</ProjectGuid>
+    <RootNamespace>On the Edge</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.30804.86</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/On the Edge.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;DIRECTINPUT_VERSION=0x900;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Release/On the Edge.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040b</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;strmiids.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dsound.lib;dinput8.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/On the Edge.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/On the Edge.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/On the Edge.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files\FMOD SoundSystem\FMOD Programmers API\api\inc;C:\DX9 Dec05 SDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;DIRECTINPUT_VERSION=0x900;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Debug/On the Edge.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040b</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;strmiids.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dsound.lib;dinput8.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/On the Edge.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/On the Edge.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="OtE source\ActionEvent.cpp" />
+    <ClCompile Include="OtE source\AmmoDatabase.cpp" />
+    <ClCompile Include="OtE source\Campaign.cpp" />
+    <ClCompile Include="OtE source\Controllers\ActivateableDoorLiftController.cpp" />
+    <ClCompile Include="OtE source\Controllers\ControllerManager.cpp" />
+    <ClCompile Include="OtE source\Controllers\EnemyAI.cpp" />
+    <ClCompile Include="OtE source\Controllers\FixedRotationController.cpp" />
+    <ClCompile Include="OtE source\Controllers\HoveringController.cpp" />
+    <ClCompile Include="OtE source\Controllers\Player.cpp" />
+    <ClCompile Include="OtE source\Controllers\SmoothRotationArcController.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\DirectX9\DirectX9.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\DirectX9\Font.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\DirectX9\IDirectXResource.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\DirectX9\ILight.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\DirectX9\Material.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\DirectX9\Mesh.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\DirectX9\Texture.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Edgewalker.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="OtE source\Edgewalker\EWScript\BasicScriptInstructions.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\EWScript\InstructionTemplate.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\EWScript\Script.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\EWScript\ScriptEngine.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\EWScript\ScriptParser.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Gui\GUIButton.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Gui\GUICheckbox.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Gui\GUIEnvironment.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Gui\GUIImage.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Gui\GUILabel.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Gui\GUIScrollbar.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Gui\GUIWindow.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\IApplication.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="OtE source\Edgewalker\IGameObject.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="OtE source\Edgewalker\IniFile.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Input\IInputReceiver.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Input\InputEngine.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Input\InputJoystick.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Input\InputJoystickEffect.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Input\InputKeyboard.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Input\InputMouse.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Math.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="OtE source\Edgewalker\ParticleSystem\ParticleCache.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\ParticleSystem\ParticleEmitter.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\ParticleSystem\ParticleEngine.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\ParticleSystem\ParticleSystemSceneNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\PhysicsEngine.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="OtE source\Edgewalker\Printer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="OtE source\Edgewalker\ResourceManager.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\CameraFollowSceneNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\CameraFPSSceneNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\CameraSceneNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\Frustum.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\LightSceneNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\MeshSceneNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\ObjectManagerSceneNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\SceneManager.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\Sector.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\SkyBoxSceneNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Scene\SmoothFollowCamera.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\SimpleStaticProfiler.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Terrain\HeighmapTerrain.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Terrain\ITerrain.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Terrain\Tile.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Terrain\TiledTerrain.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Terrain\TileManager.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Terrain\TileQuadTreeNode.cpp" />
+    <ClCompile Include="OtE source\Edgewalker\Timer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="OtE source\Gadgets\GadgetDatabase.cpp" />
+    <ClCompile Include="OtE source\Gadgets\HoverGadget.cpp" />
+    <ClCompile Include="OtE source\Gadgets\IGadget.cpp" />
+    <ClCompile Include="OtE source\Gadgets\KineticGadget.cpp" />
+    <ClCompile Include="OtE source\Gadgets\PossessGadget.cpp" />
+    <ClCompile Include="OtE source\Gadgets\ShieldGadget.cpp" />
+    <ClCompile Include="OtE source\Gadgets\StealthGadget.cpp" />
+    <ClCompile Include="OtE source\Gadgets\WeaponGadget.cpp" />
+    <ClCompile Include="OtE source\Game.cpp" />
+    <ClCompile Include="OtE source\GameSettings.cpp" />
+    <ClCompile Include="OtE source\GameSituation.cpp" />
+    <ClCompile Include="OtE source\Items\GadgetComponent.cpp" />
+    <ClCompile Include="OtE source\Items\ItemManager.cpp" />
+    <ClCompile Include="OtE source\Items\QuestItem.cpp" />
+    <ClCompile Include="OtE source\Items\ShipPatch.cpp" />
+    <ClCompile Include="OtE source\Level.cpp" />
+    <ClCompile Include="OtE source\LightEffectManager.cpp" />
+    <ClCompile Include="OtE source\main.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="OtE source\menus\Animators\DropdownAnimator.cpp" />
+    <ClCompile Include="OtE source\menus\Animators\FadeMenuAnimator.cpp" />
+    <ClCompile Include="OtE source\menus\Animators\LinearInterpolateAnimator.cpp" />
+    <ClCompile Include="OtE source\menus\Animators\VerticalScaleAnimator.cpp" />
+    <ClCompile Include="OtE source\menus\AssistantView.cpp" />
+    <ClCompile Include="OtE source\menus\CampaignSelectionMenu.cpp" />
+    <ClCompile Include="OtE source\menus\ControlsMenu.cpp" />
+    <ClCompile Include="OtE source\menus\CreditsMenu.cpp" />
+    <ClCompile Include="OtE source\menus\DialogueWindow.cpp" />
+    <ClCompile Include="OtE source\menus\FlowMenu.cpp" />
+    <ClCompile Include="OtE source\menus\GadgetHotkeysMenu.cpp" />
+    <ClCompile Include="OtE source\menus\GeneralControlsMenu.cpp" />
+    <ClCompile Include="OtE source\menus\IMenuHandler.cpp" />
+    <ClCompile Include="OtE source\menus\InputSettingsMenu.cpp" />
+    <ClCompile Include="OtE source\menus\InventoryMenu.cpp" />
+    <ClCompile Include="OtE source\menus\InventorySubView.cpp" />
+    <ClCompile Include="OtE source\menus\LevelSelectionMenu.cpp" />
+    <ClCompile Include="OtE source\menus\LoadSaveMenu.cpp" />
+    <ClCompile Include="OtE source\menus\MainMenu.cpp" />
+    <ClCompile Include="OtE source\menus\MenuDatabase.cpp" />
+    <ClCompile Include="OtE source\menus\MenuFileParser.cpp" />
+    <ClCompile Include="OtE source\menus\MenuManager.cpp" />
+    <ClCompile Include="OtE source\menus\MenuStackManager.cpp" />
+    <ClCompile Include="OtE source\menus\MouseConfigMenu.cpp" />
+    <ClCompile Include="OtE source\menus\OptionsMenu.cpp" />
+    <ClCompile Include="OtE source\menus\PlayerControlsMenu.cpp" />
+    <ClCompile Include="OtE source\menus\TerminalView.cpp" />
+    <ClCompile Include="OtE source\MultiplayerMode.cpp" />
+    <ClCompile Include="OtE source\Objects\Ammo.cpp" />
+    <ClCompile Include="OtE source\Objects\DynamicObject.cpp" />
+    <ClCompile Include="OtE source\Objects\Enemy.cpp" />
+    <ClCompile Include="OtE source\Objects\FloatingText.cpp" />
+    <ClCompile Include="OtE source\Objects\ObjectManager.cpp" />
+    <ClCompile Include="OtE source\Objects\Ship.cpp" />
+    <ClCompile Include="OtE source\Objects\StaticObject.cpp" />
+    <ClCompile Include="OtE source\Objects\Trigger.cpp" />
+    <ClCompile Include="OtE source\Objects\Vessel.cpp" />
+    <ClCompile Include="OtE source\Objects\VesselShadow.cpp" />
+    <ClCompile Include="OtE source\OnTheEdge.cpp" />
+    <ClCompile Include="OtE source\OtEScript\EnemyInstructions.cpp" />
+    <ClCompile Include="OtE source\OtEScript\GadgetInstructions.cpp" />
+    <ClCompile Include="OtE source\OtEScript\GameInstructions.cpp" />
+    <ClCompile Include="OtE source\OtEScript\ObjectInstructions.cpp" />
+    <ClCompile Include="OtE source\OtEScript\OtEScriptInstructions.cpp" />
+    <ClCompile Include="OtE source\OtEScript\ScriptManager.cpp" />
+    <ClCompile Include="OtE source\OtEScript\ScriptTimer.cpp" />
+    <ClCompile Include="OtE source\OtEScript\TimerInstructions.cpp" />
+    <ClCompile Include="OtE source\ParticleEffects.cpp" />
+    <ClCompile Include="OtE source\SaveGameManager.cpp" />
+    <ClCompile Include="OtE source\ScreenshotManager.cpp" />
+    <ClCompile Include="OtE source\Screen\AssistantMessages.cpp" />
+    <ClCompile Include="OtE source\Screen\Dialogue.cpp" />
+    <ClCompile Include="OtE source\Screen\HealthBar.cpp" />
+    <ClCompile Include="OtE source\Screen\ScreenMessages.cpp" />
+    <ClCompile Include="OtE source\Screen\StatusDisplay.cpp" />
+    <ClCompile Include="OtE source\Screen\Terminal.cpp" />
+    <ClCompile Include="OtE source\SettingsFileParser.cpp" />
+    <ClCompile Include="OtE source\Sound\Sound.cpp" />
+    <ClCompile Include="OtE source\Sound\SoundManager.cpp" />
+    <ClCompile Include="OtE source\WayPointSet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OtE source\ActionEvent.h" />
+    <ClInclude Include="OtE source\AmmoDatabase.h" />
+    <ClInclude Include="OtE source\Campaign.h" />
+    <ClInclude Include="OtE source\Controllers\ActivateableDoorLiftController.h" />
+    <ClInclude Include="OtE source\Controllers\ControllerManager.h" />
+    <ClInclude Include="OtE source\Controllers\EnemyAI.h" />
+    <ClInclude Include="OtE source\Controllers\FixedRotationController.h" />
+    <ClInclude Include="OtE source\Controllers\HoveringController.h" />
+    <ClInclude Include="OtE source\Controllers\Player.h" />
+    <ClInclude Include="OtE source\Controllers\SmoothRotationArcController.h" />
+    <ClInclude Include="OtE source\Edgewalker\aabbox3d.h" />
+    <ClInclude Include="OtE source\Edgewalker\bsphere3d.h" />
+    <ClInclude Include="OtE source\Edgewalker\DirectX9\DirectX9.h" />
+    <ClInclude Include="OtE source\Edgewalker\DirectX9\Font.h" />
+    <ClInclude Include="OtE source\Edgewalker\DirectX9\IDirectXResource.h" />
+    <ClInclude Include="OtE source\Edgewalker\DirectX9\ILight.h" />
+    <ClInclude Include="OtE source\Edgewalker\DirectX9\Material.h" />
+    <ClInclude Include="OtE source\Edgewalker\DirectX9\Mesh.h" />
+    <ClInclude Include="OtE source\Edgewalker\DirectX9\Texture.h" />
+    <ClInclude Include="OtE source\Edgewalker\Edgewalker.h" />
+    <ClInclude Include="OtE source\Edgewalker\EWScript\BasicScriptInstructions.h" />
+    <ClInclude Include="OtE source\Edgewalker\EWScript\InstructionTemplate.h" />
+    <ClInclude Include="OtE source\Edgewalker\EWScript\Script.h" />
+    <ClInclude Include="OtE source\Edgewalker\EWScript\ScriptEngine.h" />
+    <ClInclude Include="OtE source\Edgewalker\EWScript\ScriptEngineDefines.h" />
+    <ClInclude Include="OtE source\Edgewalker\EWScript\ScriptParser.h" />
+    <ClInclude Include="OtE source\Edgewalker\EWScript\Vector3D.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\GUIButton.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\GUICheckbox.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\GUIEnvironment.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\GUIImage.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\GUILabel.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\GUIScrollbar.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\GUIWindow.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\IEventReceiver.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\IExternalGUIWindowRendering.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\IGUIElement.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\IGUIEnvironment.h" />
+    <ClInclude Include="OtE source\Edgewalker\Gui\IGUIWindowAnimationSequence.h" />
+    <ClInclude Include="OtE source\Edgewalker\IApplication.h" />
+    <ClInclude Include="OtE source\Edgewalker\IGameObject.h" />
+    <ClInclude Include="OtE source\Edgewalker\IGameObjectController.h" />
+    <ClInclude Include="OtE source\Edgewalker\IGeometricObject.h" />
+    <ClInclude Include="OtE source\Edgewalker\ILogWriter.h" />
+    <ClInclude Include="OtE source\Edgewalker\IniFile.h" />
+    <ClInclude Include="OtE source\Edgewalker\Input\IInputReceiver.h" />
+    <ClInclude Include="OtE source\Edgewalker\Input\InputEngine.h" />
+    <ClInclude Include="OtE source\Edgewalker\Input\InputJoystick.h" />
+    <ClInclude Include="OtE source\Edgewalker\Input\InputJoystickEffect.h" />
+    <ClInclude Include="OtE source\Edgewalker\Input\InputKeyboard.h" />
+    <ClInclude Include="OtE source\Edgewalker\Input\InputMouse.h" />
+    <ClInclude Include="OtE source\Edgewalker\Math.h" />
+    <ClInclude Include="OtE source\Edgewalker\ParticleSystem\IParticleHandler.h" />
+    <ClInclude Include="OtE source\Edgewalker\ParticleSystem\IParticleInitializer.h" />
+    <ClInclude Include="OtE source\Edgewalker\ParticleSystem\IParticleSystemSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\ParticleSystem\ParticleCache.h" />
+    <ClInclude Include="OtE source\Edgewalker\ParticleSystem\ParticleEmitter.h" />
+    <ClInclude Include="OtE source\Edgewalker\ParticleSystem\ParticleEngine.h" />
+    <ClInclude Include="OtE source\Edgewalker\ParticleSystem\ParticleSystemSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\PhysicsEngine.h" />
+    <ClInclude Include="OtE source\Edgewalker\Printer.h" />
+    <ClInclude Include="OtE source\Edgewalker\rect.h" />
+    <ClInclude Include="OtE source\Edgewalker\ResourceManager.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\CameraFollowSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\CameraFPSSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\CameraSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\Frustum.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\ISceneManager.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\ISceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\LightSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\MeshSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\ObjectManagerSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\SceneManager.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\Sector.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\SkyBoxSceneNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Scene\SmoothFollowCamera.h" />
+    <ClInclude Include="OtE source\Edgewalker\SimpleStaticProfiler.h" />
+    <ClInclude Include="OtE source\Edgewalker\StandardLogWriter.h" />
+    <ClInclude Include="OtE source\Edgewalker\Terrain\HeighmapTerrain.h" />
+    <ClInclude Include="OtE source\Edgewalker\Terrain\ITerrain.h" />
+    <ClInclude Include="OtE source\Edgewalker\Terrain\Tile.h" />
+    <ClInclude Include="OtE source\Edgewalker\Terrain\TiledTerrain.h" />
+    <ClInclude Include="OtE source\Edgewalker\Terrain\TileManager.h" />
+    <ClInclude Include="OtE source\Edgewalker\Terrain\TileQuadTreeNode.h" />
+    <ClInclude Include="OtE source\Edgewalker\Timer.h" />
+    <ClInclude Include="OtE source\Edgewalker\Utilities.h" />
+    <ClInclude Include="OtE source\Gadgets\GadgetDatabase.h" />
+    <ClInclude Include="OtE source\Gadgets\HoverGadget.h" />
+    <ClInclude Include="OtE source\Gadgets\IGadget.h" />
+    <ClInclude Include="OtE source\Gadgets\KineticGadget.h" />
+    <ClInclude Include="OtE source\Gadgets\PossessGadget.h" />
+    <ClInclude Include="OtE source\Gadgets\ShieldGadget.h" />
+    <ClInclude Include="OtE source\Gadgets\StealthGadget.h" />
+    <ClInclude Include="OtE source\Gadgets\WeaponGadget.h" />
+    <ClInclude Include="OtE source\Game.h" />
+    <ClInclude Include="OtE source\GameSettings.h" />
+    <ClInclude Include="OtE source\GameSituation.h" />
+    <ClInclude Include="OtE source\Items\GadgetComponent.h" />
+    <ClInclude Include="OtE source\Items\IInventoryItem.h" />
+    <ClInclude Include="OtE source\Items\ItemManager.h" />
+    <ClInclude Include="OtE source\Items\QuestItem.h" />
+    <ClInclude Include="OtE source\Items\ShipPatch.h" />
+    <ClInclude Include="OtE source\Level.h" />
+    <ClInclude Include="OtE source\LightEffectManager.h" />
+    <ClInclude Include="OtE source\menus\Animators\DropdownAnimator.h" />
+    <ClInclude Include="OtE source\menus\Animators\FadeMenuAnimator.h" />
+    <ClInclude Include="OtE source\menus\Animators\LinearInterpolateAnimator.h" />
+    <ClInclude Include="OtE source\menus\Animators\VerticalScaleAnimator.h" />
+    <ClInclude Include="OtE source\menus\AssistantView.h" />
+    <ClInclude Include="OtE source\menus\CampaignSelectionMenu.h" />
+    <ClInclude Include="OtE source\menus\ControlsMenu.h" />
+    <ClInclude Include="OtE source\menus\CreditsMenu.h" />
+    <ClInclude Include="OtE source\menus\DialogueWindow.h" />
+    <ClInclude Include="OtE source\menus\FlowMenu.h" />
+    <ClInclude Include="OtE source\menus\GadgetHotkeysMenu.h" />
+    <ClInclude Include="OtE source\menus\GeneralControlsMenu.h" />
+    <ClInclude Include="OtE source\menus\IMenuHandler.h" />
+    <ClInclude Include="OtE source\menus\IMenuManager.h" />
+    <ClInclude Include="OtE source\menus\InputSettingsMenu.h" />
+    <ClInclude Include="OtE source\menus\InventoryMenu.h" />
+    <ClInclude Include="OtE source\menus\InventorySubView.h" />
+    <ClInclude Include="OtE source\menus\LevelSelectionMenu.h" />
+    <ClInclude Include="OtE source\menus\LoadSaveMenu.h" />
+    <ClInclude Include="OtE source\menus\MainMenu.h" />
+    <ClInclude Include="OtE source\menus\MenuDatabase.h" />
+    <ClInclude Include="OtE source\menus\MenuFileParser.h" />
+    <ClInclude Include="OtE source\menus\MenuManager.h" />
+    <ClInclude Include="OtE source\menus\MenuStackManager.h" />
+    <ClInclude Include="OtE source\menus\MouseConfigMenu.h" />
+    <ClInclude Include="OtE source\menus\OptionsMenu.h" />
+    <ClInclude Include="OtE source\menus\PlayerControlsMenu.h" />
+    <ClInclude Include="OtE source\menus\TerminalView.h" />
+    <ClInclude Include="OtE source\MultiplayerMode.h" />
+    <ClInclude Include="OtE source\Objects\Ammo.h" />
+    <ClInclude Include="OtE source\Objects\DynamicObject.h" />
+    <ClInclude Include="OtE source\Objects\Enemy.h" />
+    <ClInclude Include="OtE source\Objects\FloatingText.h" />
+    <ClInclude Include="OtE source\Objects\ISimpleObjectControlInterface.h" />
+    <ClInclude Include="OtE source\Objects\ObjectManager.h" />
+    <ClInclude Include="OtE source\Objects\ObjectTypes.h" />
+    <ClInclude Include="OtE source\Objects\Ship.h" />
+    <ClInclude Include="OtE source\Objects\StaticObject.h" />
+    <ClInclude Include="OtE source\Objects\Trigger.h" />
+    <ClInclude Include="OtE source\Objects\Vessel.h" />
+    <ClInclude Include="OtE source\Objects\VesselShadow.h" />
+    <ClInclude Include="OtE source\OnTheEdge.h" />
+    <ClInclude Include="OtE source\OtEScript\EnemyInstructions.h" />
+    <ClInclude Include="OtE source\OtEScript\GadgetInstructions.h" />
+    <ClInclude Include="OtE source\OtEScript\GameInstructions.h" />
+    <ClInclude Include="OtE source\OtEScript\ObjectInstructions.h" />
+    <ClInclude Include="OtE source\OtEScript\OtEScriptInstructions.h" />
+    <ClInclude Include="OtE source\OtEScript\ScriptManager.h" />
+    <ClInclude Include="OtE source\OtEScript\ScriptTimer.h" />
+    <ClInclude Include="OtE source\OtEScript\TimerInstructions.h" />
+    <ClInclude Include="OtE source\ParticleEffects.h" />
+    <ClInclude Include="OtE source\resource.h" />
+    <ClInclude Include="OtE source\SaveGameManager.h" />
+    <ClInclude Include="OtE source\ScreenshotManager.h" />
+    <ClInclude Include="OtE source\Screen\AssistantMessages.h" />
+    <ClInclude Include="OtE source\Screen\Dialogue.h" />
+    <ClInclude Include="OtE source\Screen\HealthBar.h" />
+    <ClInclude Include="OtE source\Screen\ScreenMessages.h" />
+    <ClInclude Include="OtE source\Screen\StatusDisplay.h" />
+    <ClInclude Include="OtE source\Screen\Terminal.h" />
+    <ClInclude Include="OtE source\SettingsFileParser.h" />
+    <ClInclude Include="OtE source\Sound\Sound.h" />
+    <ClInclude Include="OtE source\Sound\SoundManager.h" />
+    <ClInclude Include="OtE source\Sound\SoundSettings.h" />
+    <ClInclude Include="OtE source\WayPointSet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="OtE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OtE source\Resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
